@@ -6,12 +6,9 @@ body {
 
 body {
      background-color: bisque;
+     
 }
 
-#part1 {
-     font-size: medium;
-     color: blue;
-}
 
 .first {
      display: flex;
@@ -20,45 +17,71 @@ body {
      height: 700px;
 }
 
-/* เมนูติดซ้ายบน */
+
 .selectionbox {
      position: fixed;
-     /* ติดบนตลอด */
-     top: 20px;
+     top: 10px;
      right: 50px;
      z-index: 999;
 }
 
-/* หน้าหลัก กึ่งกลาง */
+
 #page {
-     display: flex;
-     justify-content: center;
-     /* กึ่งกลางแนวนอน */
-     align-items: center;
-     /* กึ่งกลางแนวตั้ง */
-     height: 700px;
-     /* ปรับตามต้องการ */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    overflow: hidden;
+    background-color: bisque;
 }
 
 #page b {
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-size: 120px;
-     color: rgb(154, 128, 24);
+    font-family: serif;
+    font-size: 140px;
+    color: rgb(154, 128, 24);
+    z-index: 10;
 }
 
+/* แอนิเมชันเหรียญตก */
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1.9;
+    }
+    100% {
+        transform: translateY(800px) rotate(360deg);
+        opacity: 0.5;
+    }
+}
+
+.coin {
+    position: absolute;
+    top: -120px;
+    width: 100px;
+    opacity: 1.8;
+    animation: fall linear infinite;
+}
+
+/* กระจายเหรียญให้ทั่วจอ */
+.coin1 { left: 10%; animation-duration: 6s; animation-delay: 0s; }
+.coin2 { left: 25%; animation-duration: 7s; animation-delay: 1s; }
+.coin3 { left: 40%; animation-duration: 5.5s; animation-delay: 2s; }
+.coin4 { left: 60%; animation-duration: 6.5s; animation-delay: 3s; }
+.coin5 { left: 75%; animation-duration: 8s; animation-delay: 1.5s; }
+.coin6 { left: 90%; animation-duration: 5s; animation-delay: 2.5s; }
 
 
 .menu a {
-     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+     border: 3px solid rgb(154, 128, 24);
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
      display: inline-block;
-     /*กล่องแยกแต่ละปุ่ม */
-     background-color: #CC9966;
+     background-color: #8B4513;
      color: lemonchiffon;
      text-decoration: none;
      padding: 10px 20px;
      border-radius: 30px;
      margin: 7px;
-     /* ระยะห่างระหว่างปุ่ม */
      font-weight: bold;
      transition: 0.3s;
 }
@@ -70,10 +93,9 @@ body {
 .abstract {
      display: flex;
      margin: 10px auto;
-     background-color: #000000;
+   background-color: rgb(219, 189, 151);
      justify-content: space-between;
      align-items: center;
-     /* <-- ปรับจาก flex-start เป็น center */
      padding: 20px 50px;
      gap: 40px;
      min-height: 700px;
@@ -81,40 +103,35 @@ body {
 
 .abstract h2 {
      text-align: center;
-     /* จัดหัวข้อกลาง */
-     font-family: 'Gill Sans', 'Trebuchet MS', sans-serif;
+     font-family: serif;
      font-size: 24px;
-     color: white;
+     color: rgb(16, 14, 14);
      margin-bottom: 20px;
 }
 
 .abstract p {
-     font-family: 'Gill Sans', 'Trebuchet MS', sans-serif;
+     font-family: serif;
      text-align: left;
-     font-size: 20px;
-     color: white;
+     font-size: 25px;
+     color: rgb(43, 39, 39);
      line-height: 1.6;
 }
 
 #picture {
      flex: 1;
-     /* ครึ่งหนึ่งของกล่อง */
      text-align: center;
 }
 
 #picture img {
      width: 100%;
-     /* กินพื้นที่ flex */
      max-width: 400px;
-     /* ขนาดไม่เกิน 400px */
      height: auto;
      border-radius: 20px;
 }
 
 #explane {
      flex: 1;
-     /* อีกครึ่งหนึ่ง */
-     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-family: serif;
      font-size: 18px;
      color: white;
      text-align: justify;
@@ -131,7 +148,6 @@ body {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     /* <-- ปรับจาก flex-start เป็น center */
      padding: 20px 50px;
      gap: 40px;
      min-height: 700px;
@@ -142,23 +158,19 @@ body {
      width: 250px;
      padding: 15px;
      margin: 20px 15px;
-     /* เว้นระยะบนล่างปุ่ม */
      border-radius: 15px;
      border: 2px solid white;
-     /* เส้นกรอบสีขาว */
      background-color: #8B4513;
      color: white;
      font-weight: bold;
      cursor: pointer;
      transition: 0.2s;
-     font-size: 30px;
+     font-size: 20px;
 }
 
 #seefeature button:hover {
-     background-color: #660000;
-     /* เปลี่ยนสีพื้นเวลา hover */
+     background-color: #996666;
      border-color: #ffffff;
-     /* กรอบยังเป็นสีขาว */
 }
 
 
@@ -167,7 +179,6 @@ body {
      text-align: center;
      display: flex;
      flex-direction: column;
-     /* h1 อยู่บน h2 */
      align-items: center;
      gap: 10px;
      border-radius: 50px;
@@ -182,36 +193,35 @@ body {
 
 
 #seetime h2 {
-     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     font-family: serif;
      font-size: 100px;
      color: #1d1a18;
      margin: 10px;
 }
 
 .showmaterial {
-     background-color: #1d1a18;
+   background: linear-gradient(120deg, #996666, #8B4513, #edd058, #fafaa7);
      min-height: 700px;
 }
 
 #huakor h2 {
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: serif;
      color: #ffffff;
      margin-left: 20px;
      font-size: 40px;
 }
 
-/* จัด material1 และ material2 ให้เป็น flex และเว้นระยะห่างเท่า ๆ กัน */
+
 #material1,
 #material2 {
      display: flex;
      justify-content: center;
      align-items: center;
      gap: 20px;
-     /* ระยะห่างรูปแต่ละอัน */
      margin: 10px 0;
 }
 
-/* กล่องแต่ละชิ้น */
+
 #material1 div,
 #material2 div {
      display: flex;
@@ -220,23 +230,20 @@ body {
      margin: 5px;
 }
 
-/* รูปภาพ */
+
 #material1 img,
 #material2 img {
      width: 200px;
      height: 200px;
      object-fit: cover;
-     /* ทำให้ภาพเต็มกรอบไม่บิดเบี้ยว */
      border: 3px solid white;
-     /* เส้นกรอบ */
      border-radius: 15px;
-     /* มุมโค้ง */
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #material1 p,
 #material2 p {
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: serif;
      color: #ffffff;
      font-size: 20px;
 }
@@ -246,37 +253,32 @@ body {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     /* <-- ปรับจาก flex-start เป็น center */
      padding: 20px 50px;
      gap: 40px;
      min-height: 700px;
-     /* สูงขั้นต่ำ ให้ดูยาวขึ้น */
+     background-color: #FFCC99;
 }
 
 
 #namemem {
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: serif;
      color: #663300;
-     font-size: 36px;
+     font-size: 52px;
      flex: 1;
-     /* ให้ฝั่งซ้ายกินพื้นที่ */
      text-align: left;
 }
 
-/* ฝั่งสมาชิก */
 #mem2 {
      display: flex;
      justify-content: flex-start;
-     /* เริ่มจากซ้าย */
 }
 
-/* แต่ละสมาชิก */
+
 #mem2 div {
      display: flex;
      flex-direction: column;
      align-items: center;
      background-color: rgba(255, 255, 255, 0.1);
-     /* ตัวอย่างพื้นหลังโปร่ง */
      padding: 10px;
      border-radius: 15px;
 }
@@ -284,27 +286,32 @@ body {
 #mem2 {
      display: flex;
      gap: 10px;
-     /* ลดระยะห่างระหว่างสมาชิก */
      flex-wrap: nowrap;
-     /* ห้ามขึ้นบรรทัดใหม่ */
      justify-content: flex-start;
 }
 
 #mem2 img {
      width: 140px;
-     /* ลดขนาดรูป */
      height: 180px;
      border-radius: 30px;
 }
 
-/* -------------------------------
-   📱 RESPONSIVE DESIGN
---------------------------------*/
+footer {
+     background-color: #333;
+     color: white;
+     text-align: center;
+     padding: 5px 0;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     font-family: sans-serif;
+     font-size: 14px;
+     opacity: 0.9;
+}
 
 @media (max-width: 992px) {
      #page b {
           font-size: 80px;
-          /* ตัวอักษรเล็กลง */
      }
 
      .abstract,
@@ -340,7 +347,6 @@ body {
 
 @media (max-width: 600px) {
 
-     /* เมนู */
      .selectionbox {
           position: static;
           text-align: center;
@@ -353,13 +359,11 @@ body {
           width: 80%;
      }
 
-     /* ตัวหนังสือหน้าแรก */
      #page b {
           font-size: 60px;
           text-align: center;
      }
 
-     /* Section ต่าง ๆ วางเรียงแนวตั้ง */
      .abstract,
      .feature2,
      .member {
@@ -369,7 +373,6 @@ body {
           text-align: center;
      }
 
-     /* รูปในส่วน material */
      #material1,
      #material2 {
           flex-direction: column;
@@ -387,7 +390,6 @@ body {
           font-size: 16px;
      }
 
-     /* ส่วน member */
      #namemem {
           text-align: center;
           font-size: 28px;

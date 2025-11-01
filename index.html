@@ -20,6 +20,12 @@
           </div>
           <div id="page">
                <b>Mangmee Bot</b>
+               <img src="coin1.png" class="coin coin1">
+               <img src="coin1.png" class="coin coin2">
+               <img src="coin1.png" class="coin coin3">
+               <img src="coin1.png" class="coin coin4">
+               <img src="coin1.png" class="coin coin5">
+               <img src="coin1.png" class="coin coin6">
           </div>
      </div>
 
@@ -32,9 +38,9 @@
                     <h2 style="text-align: center;">บทคัดย่อ</h2>
                     <p>
                          Mangmee Bot เป็นส่วนหนึ่งของรายวิชา Physical Computing ปีการศึกษา 2568
-                         โดยมีวัตถุประสงค์คือ เพื่อนำความรู้ที่ได้จากเรียนรู้พื้นฐานของ microcontroller มาสร้างเป็นชิ้นงานที่
-                         สามารถใช้ให้เกิดประโยชน์ได้จริง โดยจะเป็นกระปุกออมสิน ที่สามารถหยอดเหรียญโดยการรับค่าระยะทาง
-                         จากเซนเซอร์
+                         โดยมีวัตถุประสงค์คือ เพื่อนำความรู้ที่ได้จากเรียนรู้พื้นฐานของ microcontroller
+                         มาสร้างเป็นชิ้นงานที่สามารถใช้ให้เกิดประโยชน์ได้จริง
+                         โดยจะเป็นกระปุกออมสินที่สามารถหยอดเหรียญโดยการรับค่าระยะทางจากเซนเซอร์
                     </p>
                </div>
           </div>
@@ -44,35 +50,21 @@
      <div id="feature">
           <div class="feature2">
                <div id="seetime">
-                    <h1>This is time will show on I2C Screen!!</h1>
-                    <h2 id="clock">Loading...</h2>
+                    <h1>Short Video</h1>
+                    <img src="check.gif" alt="Mangmee Bot" width="400" height="300">
                </div>
 
                <div id="seefeature">
                     <button>Link Source</button>
-                    <button>Count</button>
+                    <a href="https://youtu.be/Ez3Wtm97nhw?si=iyX8WlGKyQ9bRiqi" target="_blank">
+                         <button>Present video link!</button>
+                    </a>
+
                </div>
           </div>
      </div>
 
 
-     <script>
-          function updateClock() {
-               const now = new Date(); // เวลาปัจจุบัน
-               const hours = now.getHours().toString().padStart(2, '0');
-               const minutes = now.getMinutes().toString().padStart(2, '0');
-               const seconds = now.getSeconds().toString().padStart(2, '0');
-
-               const timeString = `${hours}:${minutes}:${seconds}`;
-               document.getElementById('clock').textContent = timeString;
-          }
-
-          // อัปเดตทุก 1 วินาที
-          setInterval(updateClock, 1000);
-
-          // เรียกครั้งแรกทันที
-          updateClock();
-     </script>
 
      <div id="material">
           <div class="showmaterial">
@@ -100,7 +92,7 @@
 
                <div id="material2">
                     <div id="mat5">
-                         <img src="wired.jpg" alt="Mangmee Bot" >
+                         <img src="wired.jpg" alt="Mangmee Bot">
                          <p>Wired</p>
                     </div>
                     <div id="mat6">
@@ -151,6 +143,10 @@
 
           <div id="poster">
           </div>
+
+          <footer>
+               <p>จัดทำโดย Minecraft Club | © 2025 MangmeeBot Project</p>
+          </footer>
 </body>
 
 </html>
