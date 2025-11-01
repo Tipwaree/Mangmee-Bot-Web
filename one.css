@@ -288,3 +288,101 @@ body {
      height: 180px;
      border-radius: 30px;
 }
+/* -------------------------------
+   📱 RESPONSIVE DESIGN
+--------------------------------*/
+
+@media (max-width: 992px) {
+    #page b {
+        font-size: 80px; /* ตัวอักษรเล็กลง */
+    }
+
+    .abstract, .feature2, .member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #picture img {
+        max-width: 300px;
+    }
+
+    #seefeature button {
+        width: 200px;
+        font-size: 24px;
+    }
+
+    #seetime h2 {
+        font-size: 70px;
+    }
+
+    #mem2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #mem2 img {
+        width: 120px;
+        height: 160px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* เมนู */
+    .selectionbox {
+        position: static;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu a {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    /* ตัวหนังสือหน้าแรก */
+    #page b {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    /* Section ต่าง ๆ วางเรียงแนวตั้ง */
+    .abstract,
+    .feature2,
+    .member {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    /* รูปในส่วน material */
+    #material1,
+    #material2 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #material1 img,
+    #material2 img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    #material1 p,
+    #material2 p {
+        font-size: 16px;
+    }
+
+    /* ส่วน member */
+    #namemem {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    #mem2 img {
+        width: 100px;
+        height: 130px;
+    }
+}
