@@ -1,6 +1,6 @@
 html,
 body {
-     height:100%;
+     height: 100%;
      scroll-behavior: smooth;
 }
 
@@ -14,32 +14,36 @@ body {
 }
 
 .first {
-    display: flex;
-    justify-content: flex-end; 
-    align-items: flex-end;
-    height: 700px;
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-end;
+     height: 700px;
 }
 
 /* เมนูติดซ้ายบน */
 .selectionbox {
-    position: fixed;   /* ติดบนตลอด */
-    top: 20px;
-    right: 50px;
-    z-index: 999;
+     position: fixed;
+     /* ติดบนตลอด */
+     top: 20px;
+     right: 50px;
+     z-index: 999;
 }
 
 /* หน้าหลัก กึ่งกลาง */
 #page {
-    display: flex;
-    justify-content: center;  /* กึ่งกลางแนวนอน */
-    align-items: center;      /* กึ่งกลางแนวตั้ง */
-    height: 700px;            /* ปรับตามต้องการ */
+     display: flex;
+     justify-content: center;
+     /* กึ่งกลางแนวนอน */
+     align-items: center;
+     /* กึ่งกลางแนวตั้ง */
+     height: 700px;
+     /* ปรับตามต้องการ */
 }
 
 #page b {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 120px;
-    color: rgb(154, 128, 24);
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 120px;
+     color: rgb(154, 128, 24);
 }
 
 
@@ -199,31 +203,35 @@ body {
 /* จัด material1 และ material2 ให้เป็น flex และเว้นระยะห่างเท่า ๆ กัน */
 #material1,
 #material2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;        /* ระยะห่างรูปแต่ละอัน */
-    margin: 10px 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+     /* ระยะห่างรูปแต่ละอัน */
+     margin: 10px 0;
 }
 
 /* กล่องแต่ละชิ้น */
 #material1 div,
 #material2 div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 5px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin: 5px;
 }
 
 /* รูปภาพ */
 #material1 img,
 #material2 img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;       /* ทำให้ภาพเต็มกรอบไม่บิดเบี้ยว */
-    border: 3px solid white; /* เส้นกรอบ */
-    border-radius: 15px;     /* มุมโค้ง */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     width: 200px;
+     height: 200px;
+     object-fit: cover;
+     /* ทำให้ภาพเต็มกรอบไม่บิดเบี้ยว */
+     border: 3px solid white;
+     /* เส้นกรอบ */
+     border-radius: 15px;
+     /* มุมโค้ง */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #material1 p,
@@ -288,101 +296,113 @@ body {
      height: 180px;
      border-radius: 30px;
 }
+
 /* -------------------------------
    📱 RESPONSIVE DESIGN
 --------------------------------*/
 
 @media (max-width: 992px) {
-    #page b {
-        font-size: 80px; /* ตัวอักษรเล็กลง */
-    }
+     #page b {
+          font-size: 80px;
+          /* ตัวอักษรเล็กลง */
+     }
 
-    .abstract, .feature2, .member {
-        flex-direction: column;
-        text-align: center;
-    }
+     .abstract,
+     .feature2,
+     .member {
+          flex-direction: column;
+          text-align: center;
+     }
 
-    #picture img {
-        max-width: 300px;
-    }
+     #picture img {
+          max-width: 300px;
+     }
 
-    #seefeature button {
-        width: 200px;
-        font-size: 24px;
-    }
+     #seefeature button {
+          width: 200px;
+          font-size: 24px;
+     }
 
-    #seetime h2 {
-        font-size: 70px;
-    }
+     #seetime h2 {
+          font-size: 70px;
+     }
 
-    #mem2 {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+     #mem2 {
+          flex-wrap: wrap;
+          justify-content: center;
+     }
 
-    #mem2 img {
-        width: 120px;
-        height: 160px;
-    }
+     #mem2 img {
+          width: 120px;
+          height: 160px;
+     }
 }
 
 @media (max-width: 600px) {
 
-    /* เมนู */
-    .selectionbox {
-        position: static;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+     /* เมนู */
+     .selectionbox {
+          position: static;
+          text-align: center;
+          margin-bottom: 10px;
+     }
 
-    .menu a {
-        display: block;
-        margin: 10px auto;
-        width: 80%;
-    }
+     .menu a {
+          display: block;
+          margin: 10px auto;
+          width: 80%;
+     }
 
-    /* ตัวหนังสือหน้าแรก */
-    #page b {
-        font-size: 60px;
-        text-align: center;
-    }
+     /* ตัวหนังสือหน้าแรก */
+     #page b {
+          font-size: 60px;
+          text-align: center;
+     }
 
-    /* Section ต่าง ๆ วางเรียงแนวตั้ง */
-    .abstract,
-    .feature2,
-    .member {
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
-        text-align: center;
-    }
+     /* Section ต่าง ๆ วางเรียงแนวตั้ง */
+     .abstract,
+     .feature2,
+     .member {
+          flex-direction: column;
+          padding: 20px;
+          gap: 20px;
+          text-align: center;
+     }
 
-    /* รูปในส่วน material */
-    #material1,
-    #material2 {
-        flex-direction: column;
-        gap: 15px;
-    }
+     /* รูปในส่วน material */
+     #material1,
+     #material2 {
+          flex-direction: column;
+          gap: 15px;
+     }
 
-    #material1 img,
-    #material2 img {
-        max-width: 150px;
-        height: auto;
-    }
+     #material1 img,
+     #material2 img {
+          max-width: 150px;
+          height: auto;
+     }
 
-    #material1 p,
-    #material2 p {
-        font-size: 16px;
-    }
+     #material1 p,
+     #material2 p {
+          font-size: 16px;
+     }
 
-    /* ส่วน member */
-    #namemem {
-        text-align: center;
-        font-size: 28px;
-    }
+     /* ส่วน member */
+     #namemem {
+          text-align: center;
+          font-size: 28px;
+     }
 
-    #mem2 img {
-        width: 100px;
-        height: 130px;
-    }
+     #mem2 img {
+          width: 100px;
+          height: 130px;
+     }
+
+     h2 {
+          font-size: 22px;
+     }
+
+     p {
+          font-size: 16px;
+     }
 }
