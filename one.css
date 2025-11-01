@@ -1,6 +1,6 @@
 html,
 body {
-     height: 100%;
+     height:100%;
      scroll-behavior: smooth;
 }
 
@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: flex-end; 
     align-items: flex-end;
-    height: 600px;
+    height: 700px;
 }
 
 /* เมนูติดซ้ายบน */
@@ -33,7 +33,7 @@ body {
     display: flex;
     justify-content: center;  /* กึ่งกลางแนวนอน */
     align-items: center;      /* กึ่งกลางแนวตั้ง */
-    height: 600px;            /* ปรับตามต้องการ */
+    height: 700px;            /* ปรับตามต้องการ */
 }
 
 #page b {
@@ -72,7 +72,7 @@ body {
      /* <-- ปรับจาก flex-start เป็น center */
      padding: 20px 50px;
      gap: 40px;
-     min-height: 600px;
+     min-height: 700px;
 }
 
 .abstract h2 {
@@ -130,7 +130,7 @@ body {
      /* <-- ปรับจาก flex-start เป็น center */
      padding: 20px 50px;
      gap: 40px;
-     min-height: 600px;
+     min-height: 700px;
 }
 
 
@@ -186,6 +186,7 @@ body {
 
 .showmaterial {
      background-color: #1d1a18;
+     min-height: 700px;
 }
 
 #huakor h2 {
@@ -198,35 +199,31 @@ body {
 /* จัด material1 และ material2 ให้เป็น flex และเว้นระยะห่างเท่า ๆ กัน */
 #material1,
 #material2 {
-     display: flex;
-     justify-content: center;
-     /* จัดกึ่งกลาง container */
-     align-items: center;
-     gap: 20px;
-     /* ระยะห่างระหว่างรูปภาพแต่ละชิ้น */
-     margin: 10px 0;
-     /* เว้นระยะด้านบน-ล่างของแต่ละ row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;        /* ระยะห่างรูปแต่ละอัน */
+    margin: 10px 0;
 }
 
-/* จัดแต่ละ item (mat1, mat2, ...) */
+/* กล่องแต่ละชิ้น */
 #material1 div,
 #material2 div {
-     display: flex;
-     flex-direction: column;
-     /* รูปบนข้อความล่าง */
-     align-items: center;
-     margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
 }
 
-/* ใส่กรอบให้รูปภาพ */
+/* รูปภาพ */
 #material1 img,
 #material2 img {
-     border: 3px solid white;
-     /* เส้นกรอบสีขาว */
-     border-radius: 15px;
-     /* ขอบโค้ง */
-     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-     /* เงาเล็ก ๆ */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;       /* ทำให้ภาพเต็มกรอบไม่บิดเบี้ยว */
+    border: 3px solid white; /* เส้นกรอบ */
+    border-radius: 15px;     /* มุมโค้ง */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #material1 p,
@@ -244,7 +241,7 @@ body {
      /* <-- ปรับจาก flex-start เป็น center */
      padding: 20px 50px;
      gap: 40px;
-     min-height: 600px;
+     min-height: 700px;
      /* สูงขั้นต่ำ ให้ดูยาวขึ้น */
 }
 
