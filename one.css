@@ -6,7 +6,7 @@ body {
 
 body {
      background-color: bisque;
-     
+
 }
 
 
@@ -27,50 +27,96 @@ body {
 
 
 #page {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    overflow: hidden;
-    background-color: bisque;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 700px;
+     overflow: hidden;
+     background-color: bisque;
 }
 
 #page b {
-    font-family: serif;
-    font-size: 140px;
-    color: rgb(154, 128, 24);
-    z-index: 10;
+     font-family: serif;
+     font-size: 140px;
+     color: rgb(154, 128, 24);
+     z-index: 10;
 }
 
 /* แอนิเมชันเหรียญตก */
 @keyframes fall {
-    0% {
-        transform: translateY(-100px) rotate(0deg);
-        opacity: 1.9;
-    }
-    100% {
-        transform: translateY(800px) rotate(360deg);
-        opacity: 0.5;
-    }
+     0% {
+          transform: translateY(-100px) rotate(0deg);
+
+          opacity: 1;
+     }
+
+     100% {
+          transform: translateY(800px) rotate(180deg);
+          opacity: 0.5;
+     }
+
 }
 
 .coin {
-    position: absolute;
-    top: -120px;
-    width: 100px;
-    opacity: 1.8;
-    animation: fall linear infinite;
+     position: absolute;
+     top: -120px;
+     width: 100px;
+     opacity: 1.8;
+     animation: fall linear infinite;
 }
 
 /* กระจายเหรียญให้ทั่วจอ */
-.coin1 { left: 10%; animation-duration: 6s; animation-delay: 0s; }
-.coin2 { left: 25%; animation-duration: 7s; animation-delay: 1s; }
-.coin3 { left: 40%; animation-duration: 5.5s; animation-delay: 2s; }
-.coin4 { left: 60%; animation-duration: 6.5s; animation-delay: 3s; }
-.coin5 { left: 75%; animation-duration: 8s; animation-delay: 1.5s; }
-.coin6 { left: 90%; animation-duration: 5s; animation-delay: 2.5s; }
+.coin1 {
+     left: 10%;
+     animation-duration: 6s;
+     animation-delay: 0s;
+     transform-origin: 50% 50%;
+}
 
+.coin2 {
+     left: 25%;
+     animation-duration: 7s;
+     animation-delay: 1s;
+     transform-origin: 30% 70%;
+}
+
+.coin3 {
+     left: 40%;
+     animation-duration: 5.5s;
+     animation-delay: 2s;
+     transform-origin: 70% 30%;
+}
+
+.coin4 {
+     left: 60%;
+     animation-duration: 6.5s;
+     animation-delay: 3s;
+     transform-origin: 20% 20%;
+}
+
+.coin5 {
+     left: 75%;
+     animation-duration: 8s;
+     animation-delay: 1.5s;
+     transform-origin: 80% 80%;
+}
+
+.coin6 {
+     left: 90%;
+     animation-duration: 5s;
+     animation-delay: 2.5s;
+     transform-origin: 60% 40%;
+}
+
+
+.menu {
+     background: rgba(255, 248, 220, 0.4);
+     backdrop-filter: blur(10px);
+     padding: 5px 15px;
+     border-radius: 50px;
+     box-shadow: 0 4px 15px rgba(154, 128, 24, 0.3);
+}
 
 .menu a {
      border: 3px solid rgb(154, 128, 24);
@@ -86,25 +132,50 @@ body {
      transition: 0.3s;
 }
 
+@keyframes gradientMove {
+     0% {
+          background-position: 0% 50%;
+     }
+
+     100% {
+          background-position: 100% 50%;
+     }
+}
+
 .menu a:hover {
-     background-color: #996666;
+     background: linear-gradient(90deg, #8e6a0e, #f8ed8e, #8B4513);
+     background-size: 200% 200%;
+     animation: gradientMove 1s linear forwards;
+     transform: scale(1.1);
+     color: #663300;
 }
 
 .abstract {
      display: flex;
-     margin: 10px auto;
-   background-color: rgb(219, 189, 151);
-     justify-content: space-between;
      align-items: center;
-     padding: 20px 50px;
-     gap: 40px;
-     min-height: 700px;
+     justify-content: center;
+     gap: 10px;
+     padding: 50px;
+     margin: 50px auto;
+     max-width: 1100px;
+     background: linear-gradient(135deg, #fce7c3, #fcedcd);
+     border-radius: 40px;
+     border: 3px solid rgb(154, 128, 24);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3),
+          inset 0 3px 10px rgba(255, 255, 255, 0.6);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.abstract:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 30px rgba(116, 102, 102, 0.35),
+          inset 0 3px 10px rgba(255, 255, 255, 0.7);
 }
 
 .abstract h2 {
      text-align: center;
      font-family: serif;
-     font-size: 24px;
+     font-size: 20px;
      color: rgb(16, 14, 14);
      margin-bottom: 20px;
 }
@@ -112,7 +183,7 @@ body {
 .abstract p {
      font-family: serif;
      text-align: left;
-     font-size: 25px;
+     font-size: 20px;
      color: rgb(43, 39, 39);
      line-height: 1.6;
 }
@@ -123,10 +194,9 @@ body {
 }
 
 #picture img {
-     width: 100%;
-     max-width: 400px;
+     max-width: 500px;
      height: auto;
-     border-radius: 20px;
+     border-radius: 60px;
 }
 
 #explane {
@@ -168,9 +238,23 @@ body {
      font-size: 20px;
 }
 
+@keyframes gradientMove {
+     0% {
+          background-position: 0% 50%;
+     }
+
+     100% {
+          background-position: 100% 50%;
+     }
+}
+
+
 #seefeature button:hover {
-     background-color: #996666;
-     border-color: #ffffff;
+     background: linear-gradient(90deg, #8e6a0e, #f8ed8e, #8B4513);
+     background-size: 200% 200%;
+     animation: gradientMove 1s linear forwards;
+     transform: scale(1.1);
+     color: #663300;
 }
 
 
@@ -200,7 +284,7 @@ body {
 }
 
 .showmaterial {
-   background: linear-gradient(120deg, #996666, #8B4513, #edd058, #fafaa7);
+     background: linear-gradient(120deg, #996666, #8B4513, #edd058, #fafaa7);
      min-height: 700px;
 }
 
@@ -241,6 +325,16 @@ body {
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+#material1 img:hover {
+     transform: scale(1.08);
+     box-shadow: 0 10px 25px rgba(242, 207, 68, 0.7);
+}
+
+#material2 img:hover {
+     transform: scale(1.08);
+     box-shadow: 0 10px 25px rgba(242, 207, 68, 0.7);
+}
+
 #material1 p,
 #material2 p {
      font-family: serif;
@@ -249,6 +343,29 @@ body {
 }
 
 
+#poster h1 {
+     width: 150px;
+     padding: 15px;
+     margin: 20px 15px;
+     border-radius: 50px;
+     border: 2px solid rgb(214, 203, 60);
+     background-color: #8B4513;
+     color: white;
+     font-weight: bold;
+     cursor: pointer;
+     transition: 0.1s;
+     font-size: 25px;
+}
+
+
+#poster h1:hover {
+     background: linear-gradient(90deg, #8e6a0e, #f8ed8e, #8B4513);
+     background-size: 200% 200%;
+     animation: gradientMove 1s linear forwards;
+     transform: scale(1.1);
+     color: #663300;
+}
+
 .member {
      display: flex;
      justify-content: space-between;
@@ -256,9 +373,8 @@ body {
      padding: 20px 50px;
      gap: 40px;
      min-height: 700px;
-     background-color: #FFCC99;
+     background-color: #fce7c3;
 }
-
 
 #namemem {
      font-family: serif;
@@ -296,18 +412,28 @@ body {
      border-radius: 30px;
 }
 
+#mem2 img:hover {
+     transform: scale(1.08);
+     box-shadow: 0 10px 25px rgba(242, 207, 68, 0.7);
+}
+
 footer {
-     background-color: #333;
-     color: white;
+     background: linear-gradient(90deg, #f07f2e, #b8860b, #8B4513);
+     color: #fff8dc;
      text-align: center;
      padding: 5px 0;
      bottom: 0;
      left: 0;
      width: 100%;
      font-family: sans-serif;
-     font-size: 14px;
+     font-size: 10px;
      opacity: 0.9;
+     font-weight: bold;
+     text-shadow: 1px 1px 3px #000;
+     letter-spacing: 1px;
 }
+
+
 
 @media (max-width: 992px) {
      #page b {
